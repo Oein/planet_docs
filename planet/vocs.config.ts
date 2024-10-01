@@ -28,10 +28,6 @@ export default defineConfig({
           link: "/syntax/array",
         },
         {
-          text: "매크로",
-          link: "/syntax/macro",
-        },
-        {
           text: "연산",
           link: "/syntax/calculation",
         },
