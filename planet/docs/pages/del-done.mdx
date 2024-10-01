@@ -1,0 +1,23 @@
+# 더 나아가서
+
+![이미지](https://r2.e-z.host/a13b6f5c-3520-41a2-ba6d-5911d7d2674b/5a5nrlug.png)
+
+혜성을 실행시 저희 코드에 있지 않은 `done!` 메시지를 출력합니다. 이를 한번 수정해보겠습니다.
+
+1. 혜성 basic 코드를 열어봅니다.
+
+`basic/data/basic/function/load.mcfunction`를 보면 다음과 같은 코드가 있습니다.
+
+```js [load.mcfunction]
+data remove storage 40planet:value $type_arr
+data modify storage 40planet:value $type_arr set value {int_arr:[1], float_arr:[1f], double_arr:[1d], string_arr:["1"], byte_arr:[1b]}
+data modify storage 40planet:value false set value 0b
+data modify storage 40planet:value true set value 1b
+say done! // [!code focus]
+```
+
+여기서 `say done!` 부분을 삭제해보겠습니다.
+
+![이미지](https://r2.e-z.host/a13b6f5c-3520-41a2-ba6d-5911d7d2674b/5q7ynzv7.png)
+
+`[Server] done!` 메시지가 출력되지 않는 것을 확인할 수 있습니다.

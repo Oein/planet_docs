@@ -1,0 +1,39 @@
+# Hello, World!
+
+설치도 마쳤으니, 프로그램을 만들 시간입니다. 새 언어를 배울 때면 늘 그렇듯, 만들어 볼 프로그램은 채팅창에 `Hello, world! 문자를 출력하는 간단한 프로그램입니다.
+
+## 프로젝트 디렉터리 생성하기
+
+작성할 코드를 저장해둘 디렉터리가 필요하겠죠. 혜성은 코드가 어디에 있든 실행하는데에는 문제가 없지만, 편의성을 위해 프로젝트 디렉터리를 만들어두는 것이 좋습니다.
+
+아래 부분은 파일 탐색기로 `hello-world` 폴더를 만드는 작업과 같습니다. 터미널이 익숙하지 않다면 파일 탐색기를 이용해도 무방합니다.
+
+```bash
+mkdir projects
+cd projects
+mkdir hello-world
+cd hello-world
+```
+
+## 코드 작성하고 실행하기
+
+다음으로 혜성 코드를 작성해봅시다. 혜성은 확장자가 항상 `.planet`으로 끝나야 합니다. 파일명을 지을 때는 두 단어 이상으로 이루어질 경우에는 `helloworld.planet` 와 같이 붙여서 쓰지 않고 `hello_world.planet` 처럼 단어 사이에 밑줄 (\_) 을 넣는 것이 관례입니다.
+
+::::code-group
+
+```mc [hello_world.planet]
+/say Hello, World!
+```
+
+```mcfunction [빌드/load.mcfunction]
+# This data pack was compiled with the 40planet's compiler.
+# https://github.com/alexmonkey05/Datapack-Compiler
+
+say Hello, World!
+```
+
+::::
+
+다음으로 컴퍼일러에서 `Compile`을 눌러 코드를 컴파일합니다. 이후 컴파일된 데이터팩을 `datapacks`에 넣어 실행해 봅시다.
+
+![이미지](https://r2.e-z.host/a13b6f5c-3520-41a2-ba6d-5911d7d2674b/5a5nrlug.png)
