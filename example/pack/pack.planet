@@ -1,4 +1,3 @@
-# 이것은 주석입니다.
-/say 1
-/# 마인크래프트 주석입니다.
-/say 2
+var array = [1, 2, 3]
+print(len(array))
+print("Hi")
