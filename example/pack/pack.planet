@@ -1,6 +1,5 @@
-def floor(var data){
-    return data - (data % 1);
+def timer(var a) {
+    if(type(a) == "int") {
+        print("wa! it is int!")
+    }
 }
-
-print(floor(3.14));
-print(floor(3.56));

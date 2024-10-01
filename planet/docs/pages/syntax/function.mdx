@@ -64,3 +64,27 @@ def hw(){
 ```
 
 여기서 `__namespace__`는 컴파일시 자동으로 데이터팩 이름으로 대체됩니다.
+
+## 함수 인자
+
+함수는 인자를 받을 수 있으나 마인크래프트에서 호출된 경우 가장 마지막으로 호출된 인자로 실행됩니다.
+
+::::code-group
+
+```py [function.planet]
+def add(var a, var b){
+    print(a + b)
+}
+
+add(1, 2)
+
+# 마크에서
+/function __namespace__:add
+```
+
+```py [결과]
+3
+3
+```
+
+::::
