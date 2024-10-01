@@ -4,7 +4,16 @@
 `to`를 포합합니다.
 
 ```python
-def randint(int from, int to){
+def randint(var from, var to){
+    return from + round(random() % (to - from));
+}
+```
+
+`to`를 포함하고 싶지 않은경우 아래와 같이 선언할 수 있습니다.
+
+```python
+def randint(var from, var to){
+    to = to - 1;
     return from + round(random() % (to - from));
 }
 ```
