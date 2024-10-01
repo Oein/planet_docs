@@ -1,1 +1,46 @@
 # 형변환
+
+## int(any value) -> int
+
+- 들어온 인자를 정수로 변환합니다.
+- `double`과 `float`의 경우 [`round`](/built-in/round)와 같은 역할을 합니다.
+
+## float(any value) -> float
+
+- 들어온 인자를 `float`으로 변환합니다.
+
+```python
+float(1) # 1.0f
+```
+
+## double(any value) -> double
+
+- 들어온 인자를 `double`로 변환합니다.
+
+```python
+double(1) # 1.0d
+```
+
+## bool(any value) -> bool
+
+- 들어온 인자를 `bool`로 변환합니다.
+
+```python
+bool(100) # 1
+```
+
+## string(any value) -> string
+
+- 들어온 인자를 `string`으로 변환합니다.
+
+```python
+string(1 + 1) # 2
+```
+
+## entity(string value) -> entity
+
+- 들어온 인자를 `entity`로 변환합니다.
+
+:::danger
+아직 불완전하므로 "@a"와 같은 변수만 하는 것을 추천합니다
+:::

@@ -51,8 +51,7 @@
 # }
 
 def load(){
-    print(devide(1, 2)) # 0.5
-print(devide(1.5, 2.5)) # 0.6
-print(devide(1.123, 2.123)) # 0.52968
+    print(round(1.6)) # 0.5
+print(int(1.6)) # 0.6
 }
 
