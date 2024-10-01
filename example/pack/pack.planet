@@ -51,9 +51,21 @@
 # }
 
 def load(){
-    print(round(1))
-    print(round(1.5))
+    var y = 2.5
+    var t = 1.0
+    print(type(y))
+    print(type(t))
 
-    print(round(1.7))
+    var e = true
+    print(type(e))
+    var f = "sans"
+    print(type(f))
+    var g = [1, 2, 3]
+    print(type(g))
+    var json = {
+        "name": "sans",
+        "age": 100
+    }
+    print(type(json))
 }
 
