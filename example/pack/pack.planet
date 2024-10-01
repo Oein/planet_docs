@@ -1,5 +1,5 @@
-def timer(var a) {
-    if(type(a) == "int") {
-        print("wa! it is int!")
-    }
+def add(var a, var b){
+    print(a + b)
 }
+
+add(1, 2)
