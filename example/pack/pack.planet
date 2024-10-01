@@ -3,3 +3,4 @@ def floor(var data){
 }
 
 print(floor(3.14));
+print(floor(3.56));

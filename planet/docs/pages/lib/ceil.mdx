@@ -1,0 +1,10 @@
+# ceil
+
+혜성에는 기본적으로 `ceil`이 구현되있지 않습니다. 아래와 같은 코드를 삽입하여 `ceil`을 구현할 수 있습니다.
+
+```python [floor.planet]
+def ceil(var data){
+    if(data % 1.0 * 10 < 5) return round(data) + 1;
+    return round(data);
+}
+```

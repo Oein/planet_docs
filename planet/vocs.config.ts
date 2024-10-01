@@ -121,6 +121,10 @@ export default defineConfig({
           text: "floor",
           link: "/lib/floor",
         },
+        {
+          text: "ceil",
+          link: "/lib/ceil",
+        },
       ],
     },
     {
