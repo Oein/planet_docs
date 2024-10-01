@@ -1,1 +1,85 @@
 # 조건문
+
+`if( <조건> ){ <코드> }`와 같은 형식으로 작성합니다. 중괄호를 생략할경우 한줄만 실행됩니다.
+
+::::code-group
+
+```js [if.planet]
+var a = 0;
+if (a == 0) {
+  print("A is zero");
+}
+```
+
+```js [결과]
+A is zero
+```
+
+::::
+
+`if( <조건> ){ <코드1> } else { <코드2> }`와 같은 형식으로 작성합니다.
+
+::::code-group
+
+```js [if_else.planet]
+var a = 1;
+if (a == 0) {
+  print("A is zero");
+} else {
+  print("A is not zero");
+}
+```
+
+```js [결과]
+A is not zero
+```
+
+::::
+
+`else if`구문 또한 지원하나 버그가 발생할 수 있으므로 중괄호를 사용하는 것을 권장합니다.
+
+::::code-group
+
+```js [recommend.planet]
+var a = 1;
+if (a == 0) {
+  print("A is zero");
+} else {
+  if (a == 1) {
+    print("A is one");
+  } else {
+    print("A is not zero or one");
+  }
+}
+```
+
+```js [not_recommended.planet]
+var a = 1;
+if (a == 0) {
+  print("A is zero");
+} else if (a == 1) {
+  print("A is one");
+} else {
+  print("A is not zero or one");
+}
+```
+
+::::
+
+## 조건문
+
+조건문에 변수만을 넣었을 경우 변수가 `0`이 아닐경우 참으로 판단합니다. 그러나 마인크래프트의 참/거짓을 따르기 때문에 다음과 같은 값이 들어갈 경우 거짓이 나올 수 있습니다.
+
+- `""` (빈 문자열)
+- `0.4` (반올림하여 0)
+- `-1` (음수)
+- `[]` (빈 배열)
+
+```js
+var a = 1;
+if (a) {
+  print("A is not zero");
+} else {
+  print("A is zero");
+}
+```
