@@ -1,3 +1,23 @@
-~~초 절정 미소녀~~는 아니지만 글쓴이 Oein이 귀찮아서 안썻으니 공식 문서를 참고합시다.
+# import
 
-[공식 문서](https://github.com/alexmonkey05/Datapack-Compiler/blob/main/README_kr.md#import)
+`import <파일명>`의 형태로 같은 디렉토리에 있는 `파일명.planet`을 가져올 수 있습니다.
+
+::::code-group
+
+```python [main.planet]
+import test
+
+test.hello()
+```
+
+```python [test.planet]
+def hello(){
+    print("Hello, World!")
+}
+```
+
+```shell [결과]
+Hello, World!
+```
+
+::::
