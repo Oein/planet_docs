@@ -1,3 +1,14 @@
-var array = [1, 2, 3]
-print(len(array))
-print("Hi")
+var a = 3
+print(a)
+del(a)
+print(a)
+
+var b = [1,2,3]
+print(b)
+del(b[1])
+print(b)
+
+var c = [1,2,3]
+var r = del(c[1])
+print(r)
+print(c)

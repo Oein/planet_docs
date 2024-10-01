@@ -1,1 +1,66 @@
-# 배열 (작성자가 실행이 불가능하여 작성되지 못함.)
+# 배열
+
+배열 또한 변수처럼 선언이 가능합니다.
+
+::::code-group
+
+```py [array.planet]
+var arr = [1, 2, 3, 4, 5]
+print(arr)
+```
+
+```py [결과]
+[1,2,3,4,5]
+```
+
+::::
+
+## 배열 관련 내장 함수
+
+### len(array arr) -> int
+
+벼열의 길이를 반환합니다.
+
+### append(array arr, any value) -> array
+
+배열의 끝에 값을 추가합니다. 아래 두 코드는 같은 결과를 반환합니다.
+
+::::code-group
+
+```py [array.planet]
+var arr = [1, 2, 3, 4, 5]
+append(arr, 6)
+print(arr)
+```
+
+```py [array2.planet]
+var arr = [1, 2, 3, 4, 5]
+arr = append(arr, 6)
+print(arr)
+```
+
+```py [결과]
+[1,2,3,4,5,6]
+```
+
+::::
+
+### del(arrayItem item) -> arrayItem
+
+배열의 원소를 삭제합니다.
+
+::::code-group
+
+```py [array.planet]
+var arr = [1, 2, 3, 4, 5]
+var ret = del(arr[2])
+print(arr)
+print(ret)
+```
+
+```py [결과]
+[1,2,4,5]
+3
+```
+
+::::
