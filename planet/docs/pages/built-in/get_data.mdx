@@ -1,1 +1,22 @@
-# get_data
+# get_data(string from, string|entity name, string path) -> any
+
+해당 위치의 데이터를 가져옵니다.
+
+- `from`은 `entity`, `block`, `storage` 중 하나입니다.
+- `name`은 블록의 좌표, 저장소의 이름, 엔티티중 하나입니다.
+- `path`는 데이터의 경로입니다.
+
+`/data get {from} {name} {path}`과 같은 기능을 합니다.
+
+::::code-group
+
+```python [get.planet]
+/data modify storage minecraft:test test_dir set value "it's test string!"
+print(get_data("storage", "minecraft:test", "test_dir"))
+```
+
+```python [결과]
+it's test string!
+```
+
+::::
