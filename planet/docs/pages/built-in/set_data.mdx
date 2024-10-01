@@ -1,1 +1,10 @@
-# set_data
+# set_data(string from, string|entity name, string path, any value)
+
+해당 위치의 데이터를 가져옵니다.
+
+- `from`은 `entity`, `block`, `storage` 중 하나입니다.
+- `name`은 블록의 좌표, 저장소의 이름, 엔티티중 하나입니다.
+- `path`는 데이터의 경로입니다.
+- `value`는 설정할 값입니다.
+
+`/data modify {from} {name} {path} set value {value}`과 같은 기능을 합니다.
