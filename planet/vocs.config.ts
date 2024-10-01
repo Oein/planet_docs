@@ -114,6 +114,16 @@ export default defineConfig({
       ],
     },
     {
+      text: "추가 함수",
+      collapsed: true,
+      items: [
+        {
+          text: "floor",
+          link: "/lib/floor",
+        },
+      ],
+    },
+    {
       text: "execute",
       link: "/execute",
     },
