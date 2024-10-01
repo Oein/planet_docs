@@ -101,8 +101,8 @@ export default defineConfig({
               link: "/built-in/multiply",
             },
             {
-              text: "devide",
-              link: "/built-in/devide",
+              text: "divide",
+              link: "/built-in/divide",
             },
           ],
           collapsed: true,
