@@ -1,1 +1,66 @@
 # 함수
+
+함수는 다음과 같이 선언할 수 있습니다.
+
+```py
+def tick(){
+    print("called every tick")
+}
+
+def load(){
+    print("called when loaded")
+}
+
+def function_name(var a, var b){
+    print(a, b)
+}
+```
+
+함수 이름은 소문자로 작성해야 하며, `_`를 사용할 수 있습니다.
+
+## 특수 함수
+
+아래의 특수 함수는 인수를 받지 않습니다.
+
+### `tick`
+
+`tick`이 함수 이름으로 선언된 경우, 매 틱마다 호출됩니다.
+
+### `load`
+
+`load`가 함수 이름으로 선언된 경우, 로드될 때 호출됩니다.
+
+## 함수 호출
+
+함수는 다음과 같이 호출할 수 있습니다.
+
+::::code-group
+
+```py [function.planet]
+def wa(var a){
+    return a + 1
+}
+
+def load(){
+    var ret = wa(4)
+    print(ret)
+}
+```
+
+```py [결과]
+5
+```
+
+::::
+
+만약 `/function` 을 사용하여 함수를 호출하고 싶다면 다음과 같이 작성할 수 있습니다.
+
+```py [mcfunction.planet]
+def hw(){
+    print("Hello, World")
+}
+
+/function __namespace__:hw
+```
+
+여기서 `__namespace__`는 매크로로 자세한 내용은 [매크로](/syntax/macro)를 참고하세요.
