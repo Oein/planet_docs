@@ -14,6 +14,8 @@
 
 ## 사용법
 
+### 1. UI
+
 1. [`compiler.exe`](https://github.com/alexmonkey05/Datapack-Compiler/releases) 를 받아 실행합니다.
 2. `.planet` 파일과 데이터팩이 생성될 폴더를 선택합니다.
 3. 데이터팩의 이름을 입력합니다. (마인크래프트 namespace와 같습니다)
@@ -24,3 +26,22 @@
 6. 마크 안에서 `/reload`를 실행하여 데이터팩을 새로고침합니다.
 
 [혜성 튜토리얼(Youtube Link)](https://youtu.be/vzlmWR5MqCY)
+
+### 2. CLI
+
+1. [`compiler.exe`](https://github.com/alexmonkey05/Datapack-Compiler/releases) 를 받습니다.
+2. 혹은 `compiler.py`를 받아 Python(3.12)으로 실행이 가능합니다.
+
+아래와 같이 사용할 수 있습니다.
+
+::::code-group
+
+```bash [Fullname]
+compiler.exe --cli --planet ./a.planet --version 1.21 --dist ./world/datapacks --name packpack
+```
+
+```bash [Shortname]
+compiler.exe --cli -p ./a.planet -v 1.21 -d ./world/datapacks -n packpack
+```
+
+::::
