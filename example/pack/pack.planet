@@ -1,1 +1,12 @@
-/say Hello, World!
+var array = [1, 2, 3]
+print(len(array))
+
+# var a = 13
+# var b = 2.0
+# var c = "Hello, World!"
+# var d = @p[tag=player]
+# var e = @p[tag=^b&]
+
+# append(array, a)
+
+print("Hi")
