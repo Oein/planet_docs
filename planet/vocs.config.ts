@@ -125,6 +125,10 @@ export default defineConfig({
           text: "ceil",
           link: "/lib/ceil",
         },
+        {
+          text: "randint",
+          link: "/lib/randint",
+        },
       ],
     },
     {
