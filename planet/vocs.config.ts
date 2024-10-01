@@ -113,5 +113,13 @@ export default defineConfig({
         },
       ],
     },
+    {
+      text: "execute",
+      link: "/execute",
+    },
+    {
+      text: "import",
+      link: "/import",
+    },
   ],
 });
