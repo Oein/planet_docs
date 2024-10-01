@@ -141,5 +141,5 @@ export default defineConfig({
     },
   ],
   ogImageUrl:
-    "https://vocs.dev/api/og?&title=Comet Unofficial Docs&description=%description",
+    "https://vocs.dev/api/og?&title=Comet Unofficial Docs&description=%title",
 });
