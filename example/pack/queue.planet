@@ -1,0 +1,23 @@
+var q = []
+
+def front(){
+    return q[0]
+}
+
+def pop(){
+    del(q[0])
+}
+
+def push(var x){
+    append(q, x)
+}
+
+def empty(){
+    return len(q) == 0
+}
+
+def clear(){
+    while(!(empty())){
+        pop()
+    }
+}
