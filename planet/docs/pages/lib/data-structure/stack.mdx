@@ -1,0 +1,33 @@
+# stack
+
+아래와 같은 코드를 `import`하여 실제 `stack`처럼 사용할 수 있습니다.
+
+```python [stack.planet]
+var stak = []
+
+def size(){
+    return len(stak)
+}
+
+def top(){
+    return stak[size() - 1]
+}
+
+def pop(){
+    del(stak[size() - 1])
+}
+
+def push(var x){
+    append(stak, x)
+}
+
+def empty(){
+    return len(stak) == 0
+}
+
+def clear(){
+    while(!(empty())){
+        pop()
+    }
+}
+```

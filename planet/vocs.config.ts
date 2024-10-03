@@ -114,17 +114,36 @@ export default defineConfig({
       ],
     },
     {
-      text: "추가 함수",
+      text: "라이브러리",
       collapsed: true,
       items: [
         {
-          text: "floor",
-          link: "/lib/floor",
+          text: "Math",
+          items: [
+            {
+              text: "floor",
+              link: "/lib/floor",
+            },
+            {
+              text: "ceil",
+              link: "/lib/ceil",
+            },
+          ],
         },
         {
-          text: "ceil",
-          link: "/lib/ceil",
+          text: "Data structure",
+          items: [
+            {
+              text: "queue",
+              link: "/lib/data-structure/queue",
+            },
+            {
+              text: "stack",
+              link: "/lib/data-structure/stack",
+            },
+          ],
         },
+
         {
           text: "randint",
           link: "/lib/randint",
