@@ -122,11 +122,11 @@ export default defineConfig({
           items: [
             {
               text: "floor",
-              link: "/lib/floor",
+              link: "/lib/math/floor",
             },
             {
               text: "ceil",
-              link: "/lib/ceil",
+              link: "/lib/math/ceil",
             },
           ],
         },
