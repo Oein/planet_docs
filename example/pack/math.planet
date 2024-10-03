@@ -78,24 +78,3 @@ def ceil(var x){
     /function gm:ceil {x:^x&}
     return get_data("storage","gm:io","out")
 }
-
-def min(var x, var y){
-    var s = subtract(x,y)
-    if(s < 0){
-        return x
-    }else{
-        return y
-    }
-}
-
-def max(var x, var y){
-    var s = subtract(x,y)
-    if(s < 0){
-        return y
-    }else{
-        return x
-    }
-}
-
-print(min(1.234,1.2))
-print(max(1.234,1.2))

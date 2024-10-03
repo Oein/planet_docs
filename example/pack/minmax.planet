@@ -1,0 +1,18 @@
+
+def min(var x, var y){
+    var s = subtract(x,y)
+    if(s < 0){
+        return x
+    }else{
+        return y
+    }
+}
+
+def max(var x, var y){
+    var s = subtract(x,y)
+    if(s < 0){
+        return y
+    }else{
+        return x
+    }
+}

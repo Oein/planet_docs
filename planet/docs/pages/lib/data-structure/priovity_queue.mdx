@@ -1,4 +1,15 @@
-import math
+# Priority Queue
+
+Priority Queue는 `logn`으로 삽입, 삭제, 최대값을 찾을 수 있는 자료구조입니다.
+
+:::info
+[GM](/lib/math/gm) 라이브러리를 필요로 합니다.
+:::
+
+`setup` 함수로 `priority queue`의 크기를 결정할 수 있습니다.
+
+```python [priority_queue.planet]
+import gm
 
 var pq = []
 var size = 0
@@ -20,16 +31,16 @@ def enqueue(var data){
     if (size == max_size) {
         print("Overflow: Could not insertKey")
     }
-    
-    size = math.add(size, 1)
+
+    size = gm.add(size, 1)
     i = size
     pq[i] = data
 
     while(i > 1) {
-        var md = math.floor(math.divide(i, 2))
-        var d1 = pq[ md ]
+        var md = gm.floor(gm.divide(i, 2))
+        var d1 = pq[md]
         var d2 = pq[i]
-        if(math.subtract(d1, d2) > 0) break
+        if(gm.subtract(d1, d2) > 0) break
         pq[i] = d1
         pq[md] = d2
         i = md
@@ -38,22 +49,22 @@ def enqueue(var data){
 
 def max_heapify(var i) {
     var largest = i
-    var left = math.multiply(i, 2)
-    var right = math.add(left, 1)
+    var left = gm.multiply(i, 2)
+    var right = gm.add(left, 1)
 
-    if(math.subtract(size, left) >= 0) {
-        if(math.subtract(pq[left], pq[i]) > 0) {
+    if(gm.subtract(size, left) >= 0) {
+        if(gm.subtract(pq[left], pq[i]) > 0) {
             largest = left
         }
     }
 
-    if(math.subtract(size, right) >= 0) {
-        if(math.subtract(pq[right], pq[largest]) > 0) {
+    if(gm.subtract(size, right) >= 0) {
+        if(gm.subtract(pq[right], pq[largest]) > 0) {
             largest = right
         }
     }
 
-    if(math.subtract(largest, i) != 0) {
+    if(gm.subtract(largest, i) != 0) {
         var temp = pq[i]
         pq[i] = pq[largest]
         pq[largest] = temp
@@ -65,12 +76,12 @@ def dequeue(){
     if(size == 0) {
         print("Underflow: Could not deleteKey")
     }
-    
+
     var max = pq[1];
     pq[1] = pq[size];
-    size = math.subtract(size, 1);
+    size = gm.subtract(size, 1);
     max_heapify(1);
-    
+
     return max;
 }
 
@@ -79,13 +90,13 @@ def apd(){
         var i = 100
         while(i > 0) {
             append(pq, 0)
-            i = math.subtract(i, 1)
+            i = gm.subtract(i, 1)
         }
-        reqApd = math.subtract(reqApd, 100)
+        reqApd = gm.subtract(reqApd, 100)
     } else {
         while(reqApd) {
             append(pq, 0)
-            reqApd = math.subtract(reqApd, 1)
+            reqApd = gm.subtract(reqApd, 1)
         }
     }
 }
@@ -95,3 +106,4 @@ def tick() {
         apd()
     }
 }
+```

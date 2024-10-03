@@ -141,6 +141,10 @@ export default defineConfig({
               text: "stack",
               link: "/lib/data-structure/stack",
             },
+            {
+              text: "priovity queue",
+              link: "/lib/data-structure/priovity_queue",
+            },
           ],
         },
 
