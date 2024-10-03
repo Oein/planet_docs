@@ -119,6 +119,7 @@ export default defineConfig({
       items: [
         {
           text: "Math",
+          collapsed: true,
           items: [
             {
               text: "gm",
@@ -132,6 +133,7 @@ export default defineConfig({
         },
         {
           text: "Data structure",
+          collapsed: true,
           items: [
             {
               text: "queue",
