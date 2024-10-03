@@ -1,0 +1,93 @@
+import queue
+
+def setup_bfs(){
+    /fill ~-20 ~-1 ~-20 ~20 ~-1 ~20 minecraft:black_concrete
+    /fill ~-21 ~ ~-21 ~21 ~ ~21 minecraft:oak_wood
+    /fill ~-20 ~ ~-20 ~20 ~ ~20 minecraft:air
+
+    /execute store result storage oein:value px int 1 run data get entity @s Pos[0] 1
+    /execute store result storage oein:value py int 1 run data get entity @s Pos[1] 1
+    /execute store result storage oein:value pz int 1 run data get entity @s Pos[2] 1
+
+    var px = get_data("storage", "oein:value", "px")
+    var py = get_data("storage", "oein:value", "py")
+    var pz = get_data("storage", "oein:value", "pz")
+
+    /setblock ^px& ^py& ^pz& minecraft:red_stained_glass
+
+    print(px, py, pz)
+    queue.clear()
+    queue.push([px, py, pz])
+}
+
+var dx = [1, -1, 0, 0]
+var dy = [0, 0, 1, -1]
+var running_bfs = 0
+
+def run_bfs(){
+    if(running_bfs == 2) {}
+    else{
+    running_bfs = 1
+
+    if(queue.empty()){
+        running_bfs = 0
+        print("Queue is empty")
+    } else {
+
+    var q = queue.front()
+    queue.pop()
+
+    var qx = q[0]
+    var qy = q[1]
+    var qz = q[2]
+
+    /setblock ^qx& ^qy& ^qz& minecraft:blue_stained_glass
+
+    var qym = qy - 1
+
+    /execute store success storage oein:value bl int 1 run execute unless block ^qx& ^qym& ^qz& minecraft:black_concrete
+    var bl = get_data("storage", "oein:value", "bl")
+
+    if(bl){
+        print("Found end")
+        running_bfs = 2
+    }
+    else {
+
+    var i = 0
+    while(i < 4){
+        var nx = q[0] + dx[i]
+        var ny = q[1]
+        var nz = q[2] + dy[i]
+
+        /execute store success storage oein:value bl int 1 run execute if block ^nx& ^ny& ^nz& minecraft:air
+        var bl = get_data("storage", "oein:value", "bl")
+
+        if(bl){
+            queue.push([nx, ny, nz])
+            /setblock ^nx& ^ny& ^nz& minecraft:green_stained_glass
+        }
+
+        i = i + 1
+    }
+
+    /setblock ^qx& ^qy& ^qz& minecraft:yellow_stained_glass
+
+    }
+
+    }
+
+    }
+}
+
+def tick(){
+    if(running_bfs == 1){
+        run_bfs()
+        run_bfs()
+        run_bfs()
+        run_bfs()
+        if(running_bfs == 2){
+            running_bfs = 0
+        }
+    }
+}

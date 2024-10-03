@@ -121,12 +121,12 @@ export default defineConfig({
           text: "Math",
           items: [
             {
-              text: "floor",
-              link: "/lib/math/floor",
+              text: "gm",
+              link: "/lib/math/gm",
             },
             {
-              text: "ceil",
-              link: "/lib/math/ceil",
+              text: "min/max",
+              link: "/lib/math/mm",
             },
           ],
         },
