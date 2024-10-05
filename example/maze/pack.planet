@@ -106,6 +106,7 @@ def bmsb() {
                 /execute as @e[tag=maze] at @s run fill ~^x& ~-1 ~^y& ~^tox& ~3 ~^toy& minecraft:stone
             } else {
                 /execute as @e[tag=maze] at @s run fill ~^x& ~-1 ~^y& ~^tox& ~-1 ~^toy& minecraft:stone
+                /execute as @e[tag=maze] at @s run fill ~^x& ~ ~^y& ~^tox& ~3 ~^toy& minecraft:air
             }
             bmj = bmj + 1
         } else {
